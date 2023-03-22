@@ -9,13 +9,8 @@ const Debounce = () => {
 
     /* Function to fetch articles with a request */
     const fetchArticles = ({ useDebounce = false }) => {
-        if (useDebounce) {
-            console.log('fetchArticles() is called with debounce!');
-            setFetchCountDebounce(fetchCountDebounce + 1);
-        } else { 
-            console.log('fetchArticles() is called!');
-            setFetchCountWithoutDebounce(fetchCountWithoutDebounce + 1);
-        }
+        if (useDebounce) setFetchCountDebounce(fetchCountDebounce + 1);
+        else setFetchCountWithoutDebounce(fetchCountWithoutDebounce + 1);
     }
     
     /* Use of debounce hook to fetch articles */
